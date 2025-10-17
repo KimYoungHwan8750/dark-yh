@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Dark YH",
+  "version": "1.0.0",
+  "description": "Dark YH Extension",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://*/*",
+    "http://*/*"
+  ],
+  "action": {
+
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.erdcloud.com/*"],
+      "js": ["scripts/content.js"]
+    }
+  ]
+}
