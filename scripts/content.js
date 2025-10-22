@@ -1,4 +1,4 @@
-const INTERVAL = 100;
+const INTERVAL = 1000;
 let hideAdsCompleted = false;
 let extendErdWrapCompleted = false;
 
