@@ -8,6 +8,12 @@ const extendErdWrapTask = setInterval(extendErdWrap, INTERVAL);
 function hideAds() {
     if(hideAdsCompleted) return;
     const adsArea = document.querySelector('.erd-ads-area');
+    const adsByGoogle = document.querySelectorAll('.adsbygoogle');
+    if (adsByGoogle.length) {
+        adsByGoogle.forEach(el => {
+            el.style.display = 'none';
+        })
+    }
     if (adsArea) {
         adsArea.style.display = 'none';
         hideAdsCompleted = true;
