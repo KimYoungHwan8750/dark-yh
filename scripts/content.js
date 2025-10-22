@@ -9,11 +9,20 @@ function hideAds() {
     if(hideAdsCompleted) return;
     const adsArea = document.querySelector('.erd-ads-area');
     const adsByGoogle = document.querySelectorAll('.adsbygoogle');
+    const adIframe = document.querySelectorAll('#ad_iframe');
+    
+    if (adIframe.length) {
+        adIframe.forEach(el => {
+            el.style.display = 'none';
+        })
+    }
+
     if (adsByGoogle.length) {
         adsByGoogle.forEach(el => {
             el.style.display = 'none';
         })
     }
+
     if (adsArea) {
         adsArea.style.display = 'none';
         hideAdsCompleted = true;
